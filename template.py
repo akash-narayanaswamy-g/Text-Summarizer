@@ -19,7 +19,7 @@ list_of_files = [
     f"src/{project_name}/config/configuration.py",
     f"src/{project_name}/pipeline/configuration.py",
     "config/config.yaml",
-    "params.yaml"
+    "params.yaml",
     "app.py",
     "main.py",
     "Dockerfile",
@@ -39,7 +39,7 @@ for filepath in list_of_files:
     if(not os.path.exists(filepath)) or (os.path.getsize(filepath)==0):
         with open(filepath,'w') as f:
             pass
-            logging.info(f"creating file: {filepath}")
+            logging.info(f"creating empty file: {filepath}")
     
     else:
         logging.info(f"{filepath} already exists")
